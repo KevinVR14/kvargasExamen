@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="kvargasExamen.Views.Registro">
+    <VerticalStackLayout Spacing="20"
+                         Margin="25">
+
+        <Label x:Name="lblUsuario"
+            Text="REGISTRO"
+            VerticalOptions="End" 
+            HorizontalOptions="End" />
+        <Label 
+            Text="REGISTRO"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            TextColor="Blue"
+            FontSize="22"/>
+
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Nombre"
+           FontSize="16"
+           Grid.Row="0" 
+           Grid.Column="0"></Label>
+            
+            <Label Text="Apellido"
+           FontSize="16"
+           Grid.Row="0" 
+           Grid.Column="1"></Label>
+            
+            <Label Text="Voltiamperio VA"
+           FontSize="16"
+           Grid.Row="0" 
+           Grid.Column="2"></Label>
+
+            <Entry x:Name="txtNombre"
+               Placeholder="Ingrese Nombre"
+               Grid.Row="1"
+               Grid.Column="0"/>
+            
+            <Entry x:Name="txtApellido"
+               Placeholder="Ingrese Apellido"
+               Grid.Row="1"
+               Grid.Column="1"/>
+
+            <Picker x:Name="pkVoltiamperio" 
+                    Grid.Row="1" 
+                    Grid.Column="2">
+                <Picker.Items>
+                    <x:String>500</x:String>
+                    <x:String>750</x:String>
+                    <x:String>1000</x:String>
+                </Picker.Items>
+            </Picker>
+
+        </Grid>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Fecha"
+           FontSize="16"
+           Grid.Row="0" 
+           Grid.Column="0"></Label>
+            
+            <DatePicker x:Name="dpFecha" 
+                   Date="11/10/2024"
+                   Grid.Row="0" 
+                   Grid.Column="1"></DatePicker>
+
+            <Label Text="Ciudad"
+           FontSize="16"
+           Grid.Row="1" 
+           Grid.Column="0"></Label>
+            
+            <Picker x:Name="pkCiudad" 
+                    Grid.Row="1" 
+                    Grid.Column="1">
+                <Picker.Items>
+                    <x:String>Quito</x:String>
+                    <x:String>Guayaquil</x:String>
+                    <x:String>Cuenca</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="Monto Inicial"
+           FontSize="16"
+           Grid.Row="2" 
+           Grid.Column="0"></Label>
+
+            <Entry x:Name="txtMonIni"
+               Placeholder="Ingrese Monto Inicial"
+               Grid.Row="2"
+               Grid.Column="1"/>
+
+            <Button x:Name="btnCalcular"
+                    Text="Calcular Pago mensual"
+                    Clicked="btnCalcular_Clicked"
+               Grid.Row="3"
+               Grid.Column="0"/>
+            
+            <Entry x:Name="txtCuoMen"
+               Placeholder="Cuota Mensual"
+                   IsEnabled="False"
+               Grid.Row="3"
+               Grid.Column="1"/>
+
+        </Grid>
+        <Button x:Name="btnResumen"
+                Text="Ver Resumen"
+                Clicked="btnResumen_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>
