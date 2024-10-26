@@ -109,6 +109,7 @@
 
             <Entry x:Name="txtMonIni"
                Placeholder="Ingrese Monto Inicial"
+                   IsEnabled="False"
                Grid.Row="2"
                Grid.Column="1"/>
 

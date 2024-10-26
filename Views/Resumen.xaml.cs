@@ -21,4 +21,9 @@ public partial class Resumen : ContentPage
         txtCuoMen.Text = cuotaMensual.ToString();
         txtPagTot.Text = pagoTotal.ToString();
     }
+
+    private void btnCerSes_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new Login());
+    }
 }

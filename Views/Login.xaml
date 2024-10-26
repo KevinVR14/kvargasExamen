@@ -5,14 +5,14 @@
     <VerticalStackLayout Spacing="20"
                          Margin="25">
         <Label 
-            Text="UPS"
+            Text="Inicio de Sesión"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             TextColor="Red"
             FontSize="20"/>
         <Image Source="logouisrael.png" WidthRequest="200"/>
 
-        <Grid>
+        <Grid ColumnSpacing="5">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>

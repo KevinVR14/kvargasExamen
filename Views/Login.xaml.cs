@@ -37,6 +37,6 @@ public partial class Login : ContentPage
 
     private void btnAcerca_Clicked(object sender, EventArgs e)
     {
-        DisplayAlert("Aviso", "Esta aplicación ha sido creada por Kevin Vargas", "OK");
+        DisplayAlert("Aviso", "Esta aplicación ha sido creada por: \nKevin Vargas \n1750988188", "OK");
     }
 }
